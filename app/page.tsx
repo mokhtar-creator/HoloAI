@@ -1,6 +1,5 @@
-import Hologram from "@/components/Hologram"
-import ChatHUD from "@/components/ChatHUD"
-
+import Hologram from "../components/Hologram";
+import ChatHUD from "../components/ChatHUD";
 export default function Page(){
   return (
     <main className="container">
