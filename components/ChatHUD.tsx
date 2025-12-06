@@ -22,10 +22,13 @@ export default function ChatHUD(){
 
   return (
     <div className="card" style={{flex:1}}>
-      <form onSubmit={(e)=>{ e.preventDefault(); 
-        const t=e.target.q.value;
-        if(t) sendText(t); 
-        e.target.reset()
+      <form onSubmit={(e)=>{ 
+        e.preventDefault()
+        const form = e.target as HTMLFormElement
+        const input = form.querySelector('input[name="q"]') as HTMLInputElement
+        const t = input.value
+        if(t) sendText(t)
+        form.reset()
       }}>
         <input name="q" className="input" placeholder="اكتب رسالة" />
       </form>
